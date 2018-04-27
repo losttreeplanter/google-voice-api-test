@@ -1,0 +1,46 @@
+---
+title: "Let's give this a whirl. Google Natural Language API"
+output: html_notebook
+---
+
+
+```{r}
+library(googleLanguageR)
+library(tidyverse)
+
+
+gl_auth("C:/Users/mmccrae/Downloads/My Project two test-7fd068f83b2e.json")
+
+gl_speech("C:/Users/mmccrae/Downloads/test google speech api.wav")  #works
+
+gl_speech("C:/Users/mmccrae/Downloads/CANADALAND_226_The_Great_Satan_Of_the_CBC_1.mp3") #translating latest episode of CanadaLand
+
+
+text <- "to administer medicine to animals is frequently a very difficult matter, and yet sometimes it's necessary to do so"
+## translate British into Danish
+gl_translate(text, target = "da")$translatedText
+
+#file.exists("C:/Users/mmccrae/Downloads/My Project two test-7fd068f83b2e.json")
+
+
+
+
+?gl_speech()
+
+?Startup()
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
