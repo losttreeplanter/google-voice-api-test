@@ -1,0 +1,58 @@
+---
+title: "Working Google Voice API office"
+
+
+
+---
+
+ 
+
+```{r}
+
+
+
+library(googleLanguageR)
+library(tidyverse)
+
+###let's get Craig Watkins
+
+
+# home gl_auth("D:/Admin/Documents/Google API JSON Authenticate/My Project two test-db5d6330925e.json")
+
+#office below
+
+gl_auth("C:/Users/mmccrae/Downloads/My Project two test-7fd068f83b2e.json")
+
+watkins <- gl_speech("gs://testtwoibm/craig watkins 2018_05_07_14_08_08.flac", encoding = c("FLAC"), sampleRateHertz=44100, languageCode = "en-US", maxAlternatives = 1L,asynch = TRUE)
+## Send to gl_speech_op() for status or finished result
+gl_speech_op(watkins)
+
+
+
+```
+
+
+How to un-nest and call the tibbles
+
+```{r}
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
